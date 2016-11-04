@@ -1,6 +1,5 @@
 var account = {
     cash: 12000,
-    _name: 'Default',
     withdraw: function (amount) {
         this.cash -= amount;
         console.log('Withdrew ' + amount + '. Remains ' + this.cash);
@@ -17,8 +16,13 @@ Object.defineProperty(account, 'depose', {
         console.log('Deposed ' + amount + '. Remains ' + this.cash);
     }
 });
+
+Object.defineProperty(account, '_name', {
+    value: 'Default'
+    //writeable: false // default value
+});
 console.log('Account name: ' + account._name);
-account._name = 'new Account Name';
+account._name = 'new Account Name'; // !!! unable to override since writeable: fale
 console.log('Account name: ' + account._name);
 //
 account.depose(2000);
