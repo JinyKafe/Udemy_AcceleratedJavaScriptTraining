@@ -1,20 +1,11 @@
-var age = 2;
+function Person() {
+    this.name = 'Max';
+}
 
-var person = {
-    name: 'Max',
-    age: 27,
-    kids: {
-        name: 'baruska'
-    }
+Person.prototype.greet = function () {
+    console.log('Hello ' + this.name);
 };
 
-Object.prototype.greet = function () {
-    console.log('hello there, my name is ' + this.name);
-};
+var person = new Person();
 
-var max = Object.create(person);
-
-max.greet();
-
-console.log(Object.getPrototypeOf(max) == person);
-console.log(person.name);
+person.greet();
