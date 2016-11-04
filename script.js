@@ -15,6 +15,7 @@ person.name = 'Jan';
 Person.prototype.name = 'WontApply'; /* prototype is one level higher. Does not override constructor fields*/
 Person.prototype.surname = 'Kotek';
 
+
 var max = new Person();
 
 person.greet();
@@ -23,3 +24,7 @@ max.greet();
 max.greet2();
 
 console.log(person instanceof Person);
+
+var personPrototype = Object.getPrototypeOf(Person);
+console.log(personPrototype instanceof Person);
+console.log(personPrototype == Person.__proto__);
