@@ -21,3 +21,5 @@ person.greet();
 person.greet2();
 max.greet();
 max.greet2();
+
+console.log(person instanceof Person);
