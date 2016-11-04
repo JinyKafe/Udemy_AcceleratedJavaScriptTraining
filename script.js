@@ -18,11 +18,12 @@ Object.defineProperty(account, 'depose', {
 });
 
 Object.defineProperty(account, '_name', {
-    value: 'Default'
-    //writeable: false // default value
+    value: 'Default',
+    //writable: false // default value
+    writable:true
 });
 console.log('Account name: ' + account._name);
-account._name = 'new Account Name'; // !!! unable to override since writeable: fale
+account._name = 'new Account Name'; // we can override the variable since writable:true
 console.log('Account name: ' + account._name);
 //
 account.depose(2000);
