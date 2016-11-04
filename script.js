@@ -5,4 +5,4 @@ function fn() {
 var obj = {
     objFn: fn
 };
-obj.objFn();
+obj.objFn.bind(this)();
