@@ -5,3 +5,5 @@ function  Person(name, age) {
 
 var maxPerson = new Person('Max', 30);
 console.log(maxPerson);
+var annaPerson = new Person('Anna');
+console.log(annaPerson);
