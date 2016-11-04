@@ -5,4 +5,5 @@ function fn() {
 var obj = {
     objFn: fn
 };
-obj.objFn.bind(this)();
+var person = {name: 'Max'};
+obj.objFn.bind(person)();
