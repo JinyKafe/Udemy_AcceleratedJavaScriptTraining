@@ -1,11 +1,19 @@
-function fn(message) {
-    console.log(message + this);
-}
-
-var obj = {
-    objFn: fn
+var account = {
+    cash: 12000,
+    _name: 'Default',
+    withdraw: function (amount) {
+        this.cash -= amount;
+        console.log('Withdrew ' + amount + '. Remains ' + this.cash);
+    },
+    depose: function (amount) {
+        this.cash += amount;
+        console.log('Deposed ' + amount + '. Remains ' + this.cash);
+    }
 };
-var person = {name: 'Max'};
-obj.objFn.bind(person, 'Hello')();
-obj.objFn.call(person, 'Hello');
-obj.objFn.apply(person, ['Hello']);
+
+console.log('Account name: ' + account._name);
+account._name = 'new Account Name';
+console.log('Account name: ' + account._name);
+//
+account.depose(2000);
+account.withdraw(3000);
