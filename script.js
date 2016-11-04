@@ -2,4 +2,7 @@ function fn() {
     console.log(this);
 }
 
-fn();
+var obj = {
+    objFn: fn
+};
+obj.objFn();
