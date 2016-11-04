@@ -5,10 +5,11 @@ function Person() {
     };
 }
 
-Person.prototype.greet = function () {
+Person.prototype.greet2 = function () {
     console.log('Hello ' + this.name);
 };
 
 var person = new Person();
 
 person.greet();
+person.greet2();
