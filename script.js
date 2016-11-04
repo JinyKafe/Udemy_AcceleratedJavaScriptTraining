@@ -10,6 +10,11 @@ Person.prototype.greet2 = function () {
 };
 
 var person = new Person();
+person.name = 'Jan';
+
+var max = new Person();
 
 person.greet();
 person.greet2();
+max.greet();
+max.greet2();
