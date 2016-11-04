@@ -1,9 +1,9 @@
-function fn() {
-    console.log(this);
+function fn(message) {
+    console.log(message + this);
 }
 
 var obj = {
     objFn: fn
 };
 var person = {name: 'Max'};
-obj.objFn.bind(person)();
+obj.objFn.bind(person, 'Hello')();
