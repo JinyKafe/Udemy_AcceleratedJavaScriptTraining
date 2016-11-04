@@ -6,4 +6,4 @@ var obj = {
     objFn: fn
 };
 var person = {name: 'Max'};
-obj.objFn.call(person, 'Hello');
+obj.objFn.apply(person, ['Hello']);
