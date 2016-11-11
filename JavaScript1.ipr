@@ -74,6 +74,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaScript1.iml" filepath="$PROJECT_DIR$/JavaScript1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Section_6/Section_6.iml" filepath="$PROJECT_DIR$/../Section_6/Section_6.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="true" assert-keyword="true" jdk-15="true">

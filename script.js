@@ -1,19 +1,19 @@
+var age = 2;
+
 var person = {
     name: 'Max',
     age: 27,
-    greet: function () {
-        console.log('Hello');
+    kids: {
+        name: 'baruska'
     }
 };
 
-console.log(person);
-delete person.name; // delete variable
-console.log(person);
-//
-// check presence of variable
-console.log('age' in person);
-//
-// looping all person's fields
-for (var obj in person) {
-    console.log(obj);
-}
+Object.prototype.greet = function () {
+    console.log('hello there');
+};
+
+var max = Object.create(person);
+
+max.greet();
+
+console.log(Object.getPrototypeOf(max) == person);
