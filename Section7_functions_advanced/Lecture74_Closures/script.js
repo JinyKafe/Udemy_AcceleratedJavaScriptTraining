@@ -1,3 +1,6 @@
+/* Closures are annonymous functions within another function.
+* It has access to it's parent function variables*/
+
 function generator(input) {
     var number = input;
     return function () {
