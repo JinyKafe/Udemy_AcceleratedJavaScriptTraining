@@ -6,6 +6,7 @@ function messageFn(message, number, someOtherArg) {
     console.log(arguments); // 1. you can access function arguments
 }
 
+
 // 2. you can access the function and it's properties from outside
 messageFn('Hi!', 10);
 console.log('Function name: ' + messageFn.name);
